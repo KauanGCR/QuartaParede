@@ -1,0 +1,1016 @@
+fileFormatVersion: 2
+guid: 14edea65fb9a4e34c8c61f5433db31c6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 36
+        width: 129
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071cc6ee9c92fd94b92508d6e8cd331c
+      internalID: 1224236200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_1
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 36
+        width: 130
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b301979a5260be49a53187e4e52b745
+      internalID: 2072851965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_2
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 36
+        width: 132
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8415649f0691b44a3fc3fb11a18fd2
+      internalID: -1550572185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_3
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 36
+        width: 136
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf3e683ab421b543b06f0e1560debe1
+      internalID: -1831245418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_4
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 36
+        width: 138
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c148793af6e1de34086a6463b6016459
+      internalID: -927443184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_5
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 36
+        width: 142
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6fd5525d78e9943b0b789a122f746e
+      internalID: 302121559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_6
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 36
+        width: 143
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438da6a4b20b56b44905251c5fdbf5cd
+      internalID: -491038178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_7
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 36
+        width: 143
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa13833e8ba986343b69d04b59850551
+      internalID: 27436969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_8
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 36
+        width: 143
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ac6858a24c63b45881eb93aa774ec9
+      internalID: 1834778233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_9
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 36
+        width: 142
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd89dad6affb94a4d843552d21d4391a
+      internalID: 1019246960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_10
+      rect:
+        serializedVersion: 2
+        x: 2525
+        y: 36
+        width: 140
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402a5a9438f406647aef0926d3ed9b11
+      internalID: -1742399167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_11
+      rect:
+        serializedVersion: 2
+        x: 2773
+        y: 36
+        width: 138
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7228400ae78a8c941bd96f749ca1297b
+      internalID: 958187385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_12
+      rect:
+        serializedVersion: 2
+        x: 3022
+        y: 36
+        width: 135
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6aa70e931bb6c1408f10aee4e7129ce
+      internalID: -485472733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_13
+      rect:
+        serializedVersion: 2
+        x: 3269
+        y: 36
+        width: 134
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0450df7f49f0822488951cf0c3f05a50
+      internalID: 693519584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_14
+      rect:
+        serializedVersion: 2
+        x: 3518
+        y: 36
+        width: 132
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0c031bc6c72f540b643fa57647d116
+      internalID: -520127068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_15
+      rect:
+        serializedVersion: 2
+        x: 3765
+        y: 36
+        width: 131
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a04e77445a5de24c8125df29672a5de
+      internalID: 1874116923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_16
+      rect:
+        serializedVersion: 2
+        x: 4012
+        y: 36
+        width: 131
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2c59b6d8da49745ae01edd3c808773
+      internalID: -1460639784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_17
+      rect:
+        serializedVersion: 2
+        x: 4258
+        y: 36
+        width: 133
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6077de745f2b0d648861b6ef82dbebc2
+      internalID: 2018492579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_18
+      rect:
+        serializedVersion: 2
+        x: 4503
+        y: 36
+        width: 136
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ed3fe16316a4442b201c2d86643b42
+      internalID: -152143580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_19
+      rect:
+        serializedVersion: 2
+        x: 4749
+        y: 36
+        width: 137
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4530d63afd76342bee83f3121b8a04
+      internalID: -1004460175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_20
+      rect:
+        serializedVersion: 2
+        x: 4995
+        y: 36
+        width: 140
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c25e6c70cc78f4c8b8dc87f5a983f4
+      internalID: -1544694217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_21
+      rect:
+        serializedVersion: 2
+        x: 5241
+        y: 36
+        width: 141
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2471ed69280d48a4c882fd8ac9ad334a
+      internalID: -155414408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_22
+      rect:
+        serializedVersion: 2
+        x: 5487
+        y: 36
+        width: 142
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cf952051d868a42a58584f7f88f4a2
+      internalID: -1612488647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_23
+      rect:
+        serializedVersion: 2
+        x: 5734
+        y: 36
+        width: 143
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00d94fcc2ebd364280d5d8070821647
+      internalID: 819153987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_24
+      rect:
+        serializedVersion: 2
+        x: 5980
+        y: 36
+        width: 144
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61393f22b1b26fe43aea772be3b800ec
+      internalID: 1806680516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_25
+      rect:
+        serializedVersion: 2
+        x: 6227
+        y: 36
+        width: 144
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baca6ad128d69a24295ff549582cd170
+      internalID: -1027341798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_26
+      rect:
+        serializedVersion: 2
+        x: 6476
+        y: 36
+        width: 141
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3f765902b701e42ab0a66a85ab3bd7
+      internalID: -1522225033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_27
+      rect:
+        serializedVersion: 2
+        x: 6723
+        y: 36
+        width: 141
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6f45d089eb2a24fba4aadd658eb0f6
+      internalID: 1859668828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_28
+      rect:
+        serializedVersion: 2
+        x: 6970
+        y: 36
+        width: 141
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a840d93b57e564d8fce39d0d89cfbb
+      internalID: -1196143558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_29
+      rect:
+        serializedVersion: 2
+        x: 7218
+        y: 36
+        width: 140
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d1ce14e9c78aa4aa09d0750fa7707a
+      internalID: 2110801279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_30
+      rect:
+        serializedVersion: 2
+        x: 7465
+        y: 36
+        width: 140
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52eee0f07502e33499f53c87c95f891c
+      internalID: 1506878695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_31
+      rect:
+        serializedVersion: 2
+        x: 7712
+        y: 36
+        width: 140
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc2376cd7828014d81085d32907153b
+      internalID: 538514850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_32
+      rect:
+        serializedVersion: 2
+        x: 7959
+        y: 36
+        width: 140
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0093aab1befa4c04593169a1031a95ce
+      internalID: 603798914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_33
+      rect:
+        serializedVersion: 2
+        x: 8205
+        y: 36
+        width: 141
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d139f44f3b9c4f0488691793c9eb6145
+      internalID: -1078791586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_34
+      rect:
+        serializedVersion: 2
+        x: 8451
+        y: 36
+        width: 141
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d694d620516d7dc46a46244ea7a7594f
+      internalID: 549338680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_35
+      rect:
+        serializedVersion: 2
+        x: 8699
+        y: 36
+        width: 140
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae329c172b5f1e4b89ff10d63700a61
+      internalID: 766094588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_36
+      rect:
+        serializedVersion: 2
+        x: 8945
+        y: 36
+        width: 142
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557a402033b8dbd418e530ca6f3183cc
+      internalID: -10489399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_37
+      rect:
+        serializedVersion: 2
+        x: 9193
+        y: 36
+        width: 140
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616d659fe8c99254d81fcdd2d2680712
+      internalID: 363646612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_38
+      rect:
+        serializedVersion: 2
+        x: 9443
+        y: 36
+        width: 136
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ec70183cc6bbe449e5e6c61bc3d0cf
+      internalID: -20867637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_39
+      rect:
+        serializedVersion: 2
+        x: 9692
+        y: 36
+        width: 131
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe0a35492bdc5247a9223d71820fc3e
+      internalID: 445034872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npc_cavaleiro_idle l247_a477_40
+      rect:
+        serializedVersion: 2
+        x: 9941
+        y: 36
+        width: 127
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99b2470d2396634fafe7710e62393f0
+      internalID: 162400411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      npc_cavaleiro_idle l247_a477_0: 1224236200
+      npc_cavaleiro_idle l247_a477_1: 2072851965
+      npc_cavaleiro_idle l247_a477_10: -1742399167
+      npc_cavaleiro_idle l247_a477_11: 958187385
+      npc_cavaleiro_idle l247_a477_12: -485472733
+      npc_cavaleiro_idle l247_a477_13: 693519584
+      npc_cavaleiro_idle l247_a477_14: -520127068
+      npc_cavaleiro_idle l247_a477_15: 1874116923
+      npc_cavaleiro_idle l247_a477_16: -1460639784
+      npc_cavaleiro_idle l247_a477_17: 2018492579
+      npc_cavaleiro_idle l247_a477_18: -152143580
+      npc_cavaleiro_idle l247_a477_19: -1004460175
+      npc_cavaleiro_idle l247_a477_2: -1550572185
+      npc_cavaleiro_idle l247_a477_20: -1544694217
+      npc_cavaleiro_idle l247_a477_21: -155414408
+      npc_cavaleiro_idle l247_a477_22: -1612488647
+      npc_cavaleiro_idle l247_a477_23: 819153987
+      npc_cavaleiro_idle l247_a477_24: 1806680516
+      npc_cavaleiro_idle l247_a477_25: -1027341798
+      npc_cavaleiro_idle l247_a477_26: -1522225033
+      npc_cavaleiro_idle l247_a477_27: 1859668828
+      npc_cavaleiro_idle l247_a477_28: -1196143558
+      npc_cavaleiro_idle l247_a477_29: 2110801279
+      npc_cavaleiro_idle l247_a477_3: -1831245418
+      npc_cavaleiro_idle l247_a477_30: 1506878695
+      npc_cavaleiro_idle l247_a477_31: 538514850
+      npc_cavaleiro_idle l247_a477_32: 603798914
+      npc_cavaleiro_idle l247_a477_33: -1078791586
+      npc_cavaleiro_idle l247_a477_34: 549338680
+      npc_cavaleiro_idle l247_a477_35: 766094588
+      npc_cavaleiro_idle l247_a477_36: -10489399
+      npc_cavaleiro_idle l247_a477_37: 363646612
+      npc_cavaleiro_idle l247_a477_38: -20867637
+      npc_cavaleiro_idle l247_a477_39: 445034872
+      npc_cavaleiro_idle l247_a477_4: -927443184
+      npc_cavaleiro_idle l247_a477_40: 162400411
+      npc_cavaleiro_idle l247_a477_5: 302121559
+      npc_cavaleiro_idle l247_a477_6: -491038178
+      npc_cavaleiro_idle l247_a477_7: 27436969
+      npc_cavaleiro_idle l247_a477_8: 1834778233
+      npc_cavaleiro_idle l247_a477_9: 1019246960
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

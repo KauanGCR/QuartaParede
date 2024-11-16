@@ -21,7 +21,7 @@ public class reiScript : MonoBehaviour
     public bool possuindo = false;
     public npcScript npcAtual;
     public npcScript npcReferenciado;
-    public float distMinPos = 5f;
+    public float distMinPos = 15f;
 
     public Animator animator;
 
@@ -36,7 +36,6 @@ public class reiScript : MonoBehaviour
     void Start()
     {
         estaminaAtual = estaminaMax;
-        //jogadorRenderer = GetComponent<Renderer>();
         jogadorSpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -154,25 +153,48 @@ public class reiScript : MonoBehaviour
 
     // Controle de possessão de NPCs
     void GerenciarPossessao()
+{
+    if (possuindo)
     {
-        if (possuindo)
+        // Libera o NPC se a estamina acabar, a tecla 'E' for pressionada ou sair do modo fantasma
+        if (estaminaAtual <= 0 || Input.GetKeyDown(KeyCode.E) || !modoFantasma)
         {
-            // Libera o NPC se a estamina acabar, a tecla 'E' for pressionada ou sair do modo fantasma
-            if (estaminaAtual <= 0 || Input.GetKeyDown(KeyCode.E) || !modoFantasma)
-            {
-                LiberarNPC();
-            }
-        }
-        else
-        {
-            // Possui o NPC se estiver no modo fantasma e próximo a um NPC
-            if (modoFantasma && Input.GetKeyDown(KeyCode.E) && npcAtual != null &&
-                Vector2.Distance(transform.position, npcAtual.transform.position) <= distMinPos)
-            {
-                PossuirNPC();
-            }
+            LiberarNPC();
         }
     }
+    else
+    {
+        // Atualiza o NPC mais próximo
+        AtualizarNPCProximo();
+
+        // Possui o NPC se estiver no modo fantasma e próximo de um NPC
+        if (modoFantasma && Input.GetKeyDown(KeyCode.E) && npcAtual != null)
+        {
+            PossuirNPC();
+        }
+    }
+}
+
+void AtualizarNPCProximo()
+{
+    npcAtual = null; // Reseta o NPC atual
+    float menorDistancia = distMinPos; // Define a distância mínima como o limite
+
+    // Busca todos os NPCs na cena
+    npcScript[] npcs = FindObjectsOfType<npcScript>();
+
+    foreach (npcScript npc in npcs)
+    {
+        float distancia = Vector2.Distance(transform.position, npc.transform.position);
+
+        // Atualiza o NPC mais próximo dentro da distância mínima
+        if (distancia <= menorDistancia)
+        {
+            menorDistancia = distancia;
+            npcAtual = npc;
+        }
+    }
+}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -201,7 +223,6 @@ public class reiScript : MonoBehaviour
         }
         if (collision.CompareTag("NPC"))
         {
-            npcAtual = collision.GetComponent<npcScript>();
             Physics2D.IgnoreCollision(collision, jogadorCollider, true);
         }
     }
@@ -216,7 +237,6 @@ public class reiScript : MonoBehaviour
         }
         if (collision.CompareTag("NPC"))
         {
-            npcAtual = null;
             Physics2D.IgnoreCollision(collision, jogadorCollider, false);
         }
     }
@@ -225,10 +245,10 @@ public class reiScript : MonoBehaviour
     {
         if (npcAtual != null)
         {
+            npcReferenciado = npcAtual;
             npcAtual.Possuir();
             possuindo = true;
             jogadorSpriteRenderer.enabled = false;
-            npcReferenciado = npcAtual;
             transform.position = npcAtual.transform.position;
         }
     }
@@ -260,5 +280,6 @@ public class reiScript : MonoBehaviour
         }
         dentroParede = false;
     }
+    
 }
 

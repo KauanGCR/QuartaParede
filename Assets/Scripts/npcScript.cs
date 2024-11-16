@@ -12,60 +12,87 @@ public class npcScript : MonoBehaviour
     private float velY = 0f;
     private bool aterrado = false;
     public bool isPossessed = false; // Para verificar se o NPC está possuído
+    public bool isPatrolling = false; // Para verificar se o NPC deve patrulhar
+    public Vector2 patrolPointA; // Ponto de início da patrulha
+    public Vector2 patrolPointB; // Ponto final da patrulha
+    private bool movingToB = true; // Para alternar entre os pontos de patrulha
 
-    //private Renderer npcRenderer;
     private Collider2D npcCollider;
+    public Animator animator;
 
     void Start()
     {
-        //npcRenderer = GetComponent<Renderer>(); // Acessa o Renderer do NPC
         npcCollider = GetComponent<Collider2D>(); // Acessa o Collider do NPC
     }
 
-    // Método opcional, caso você queira adicionar comportamentos ao NPC quando ele não for possuído
     void Update()
     {
+        animator.SetFloat("velX", Mathf.Abs(velX));
         if (isPossessed)
         {
-           GerenciarMovimento();
+            GerenciarMovimento();
         }
-        else
+        else if (isPatrolling)
         {
-            
+            animator.SetFloat("velX", Mathf.Abs(velMax));
+            Patrulhar();
         }
+
+        animator.SetBool("isPossuido", isPossessed);
+
+        
     }
 
     void GerenciarMovimento()
     {
-        // Movimentação Horizontal
         if (Input.GetKey(KeyCode.A))
         {
-            velX -= acel * Time.deltaTime;
+            if (velX > 0) velX = 0;
+            velX -= acel * Time.deltaTime; // Move para a esquerda
+            transform.localScale = new Vector3(-1, 1, 1); // Vira para a esquerda
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            velX += acel * Time.deltaTime;
+            if (velX < 0) velX = 0;
+            velX += acel * Time.deltaTime; // Move para a direita
+            transform.localScale = new Vector3(1, 1, 1); // Vira para a direita
         }
         else
         {
-            velX = Mathf.Lerp(velX, 0, 5 * Time.deltaTime); // Suaviza a desaceleração
+            float desaceleracao = 15f;
+            velX = Mathf.MoveTowards(velX, 0, desaceleracao * Time.deltaTime);
         }
 
         velX = Mathf.Clamp(velX, -velMax, velMax);
 
-        // Pulo
         if (Input.GetKeyDown(KeyCode.W) && aterrado)
         {
             velY = pulo;
             aterrado = false;
         }
 
-        // Aplicação da gravidade
         if (!aterrado)
             velY += gravidade * Time.deltaTime;
 
-        // Atualiza a posição do jogador
         GetComponent<Rigidbody2D>().velocity = new Vector2(velX, velY);
+    }
+
+    void Patrulhar()
+    {
+        float step = velMax * Time.deltaTime; // Velocidade da patrulha
+
+        if (movingToB)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, patrolPointB, step);
+            if (Vector2.Distance(transform.position, patrolPointB) < 0.1f) movingToB = false;
+            transform.localScale = new Vector3(1, 1, 1); // Virado para a direita
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, patrolPointA, step);
+            if (Vector2.Distance(transform.position, patrolPointA) < 0.1f) movingToB = true;
+            transform.localScale = new Vector3(-1, 1, 1); // Virado para a esquerda
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -85,19 +112,13 @@ public class npcScript : MonoBehaviour
         }
     }
 
-    // Este método pode ser chamado do script do jogador para indicar que o NPC foi possuído
     public void Possuir()
     {
         isPossessed = true;
-        //npcRenderer.enabled = false; // Torna o NPC invisível
-        //npcCollider.enabled = false; // Desativa a colisão do NPC
     }
 
-    // Este método pode ser chamado para liberar a possessão
     public void Liberar()
     {
         isPossessed = false;
-        //npcRenderer.enabled = true; // Torna o NPC visível novamente
     }
-
 }
