@@ -27,7 +27,7 @@ public class TutorialScript : MonoBehaviour
 
     private Vector3 pontoMovimento = new Vector3(0.93f, -1.74f, 0f);
     private Vector3 pontoEspaco = new Vector3(-10.39f, -1.74f, 0f);
-    private Vector3 pontoE = new Vector3(-43.14f, -1.74f, 0f);
+    private Vector3 pontoE = new Vector3(-44.14f, -1.74f, 0f);
 
     private float tempoAfastadoEspaco = 0f;
     private bool temporizadorEspacoAtivo = false;
