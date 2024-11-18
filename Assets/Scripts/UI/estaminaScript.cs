@@ -22,6 +22,10 @@ public class estaminaScript : MonoBehaviour
             jogadorObj = GameObject.FindWithTag("Player");
             jogadorScript = jogadorObj.GetComponent<reiScript>();
         }
+
+        BarraEstamina.enabled = false;
+        EstaminaVerde.enabled = false;
+        EstaminaVermelha.enabled = false;
     }
 
     // Update is called once per frame

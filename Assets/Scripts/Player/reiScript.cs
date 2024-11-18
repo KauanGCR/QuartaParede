@@ -11,7 +11,6 @@ public class reiScript : MonoBehaviour
     public float gravidade = -9.8f;
     private float velX = 0f;
     private float velY = 0f;
-
     public float estaminaMax = 100f;
     public float estaminaAtual;
     public float drenoEstamina = 20f;
@@ -22,16 +21,16 @@ public class reiScript : MonoBehaviour
     public npcScript npcAtual;
     public npcScript npcReferenciado;
     public float distMinPos = 15f;
-
     public Animator animator;
-
     public Collider2D jogadorCollider;
     //private Renderer jogadorRenderer;
     private SpriteRenderer jogadorSpriteRenderer;
     //private Sprite jogadorSpriteAnterior; // Sprite original do jogador para restaurar após a possessão
-
     private bool aterrado = false;
     private Collider2D paredeAtual;
+    public AudioSource audioSource;
+    public AudioClip somFantasma;
+    public AudioClip somPossessao;
 
     void Start()
     {
@@ -130,6 +129,23 @@ public class reiScript : MonoBehaviour
     {
         // Ativa o modo fantasma se a barra de espaço está pressionada e ainda tem estamina
         modoFantasma = Input.GetKey(KeyCode.Space) && !estaminaZerada;
+
+        if (modoFantasma && !possuindo)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = somFantasma;
+                audioSource.loop = true; // Loop para o som do modo fantasma
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            if (audioSource.isPlaying && audioSource.clip == somFantasma)
+            {
+                audioSource.Stop(); // Para o som do modo fantasma
+            }
+        }
 
         // Expulsa da parede caso o modo fantasma seja desativado
         if (dentroParede && !modoFantasma)
@@ -250,6 +266,10 @@ void AtualizarNPCProximo()
             possuindo = true;
             jogadorSpriteRenderer.enabled = false;
             transform.position = npcAtual.transform.position;
+
+            audioSource.clip = somPossessao;
+            audioSource.loop = false; // Som de possessão não precisa repetir
+            audioSource.Play();
         }
     }
 
