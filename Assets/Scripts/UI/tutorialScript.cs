@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class TutorialScript : MonoBehaviour
 {
+    [Header("Teclas")]
+    public SpriteRenderer spriteA;
+    public Sprite spriteAIdle;
+    public Sprite spriteAPressed;
+
+    public SpriteRenderer spriteD;
+    public Sprite spriteDIdle;
+    public Sprite spriteDPressed;
+
+    public SpriteRenderer spriteE;
+    public Sprite spriteEIdle;
+    public Sprite spriteEPressed;
+
+    public SpriteRenderer spriteEspaco;
+    public Sprite spriteEspacoIdle;
+    public Sprite spriteEspacoPressed;
+    
     [Header("Elementos")]
     public GameObject caixaTexto;
     public GameObject imagemRei;
@@ -16,126 +33,140 @@ public class TutorialScript : MonoBehaviour
 
     [Header("Player")]
     public Transform player;
+    public Animator animator;
 
-    [Header("Offsets")]
-    public Vector3 offsetBotaoA = new Vector3(-10f, 0.5f, 0f); // Deslocamento relativo ao jogador para o botão A
-    public Vector3 offsetBotaoD = new Vector3(10f, 0.5f, 0f);  // Deslocamento relativo ao jogador para o botão D
+    [Header("Posições de Ativação")]
+    public Vector3 pontoEspaco = new Vector3(-10.39f, -1.74f, 0f);
+    public Vector3 pontoE = new Vector3(-44.14f, -1.74f, 0f);
 
-    private bool moveu = false;
     private bool jaExibidoEspaco = false;
     private bool jaExibidoE = false;
-
-    private Vector3 pontoMovimento = new Vector3(0.93f, -1.74f, 0f);
-    private Vector3 pontoEspaco = new Vector3(-10.39f, -1.74f, 0f);
-    private Vector3 pontoE = new Vector3(-44.14f, -1.74f, 0f);
-
-    private float tempoAfastadoEspaco = 0f;
-    private bool temporizadorEspacoAtivo = false;
-    private float tempoAfastadoE = 0f;
-    private bool temporizadorEAtivo = false;
+    private bool tutorialInicialConcluido = false;
 
     void Start()
     {
-        ShowElement(caixaTexto, true);
-        ShowElement(imagemRei, true);
-        ShowElement(botaoA, false);
-        ShowElement(botaoD, false);
-        ShowElement(fantasmaPopup, false);
-        ShowElement(espaco, false);
-        ShowElement(possessaoPopup, false);
-        ShowElement(botaoE, false);
+        // Inicializa apenas a caixa de texto inicial
+        MostrarElemento(caixaTexto, true);
+        MostrarElemento(imagemRei, true);
+
+        // Oculta todos os outros elementos
+        OcultarTodosOsElementos();
     }
 
     void Update()
     {
-        // Atualiza posição dos botões de movimento enquanto estão visíveis
-        if (botaoA.activeSelf)
+        if (Input.GetKey(KeyCode.A))
         {
-            botaoA.transform.position = player.position + offsetBotaoA;
+            spriteA.sprite = spriteAPressed;
+        }
+        else
+        {
+            spriteA.sprite = spriteAIdle;
         }
 
-        if (botaoD.activeSelf)
+        // D tecla
+        if (Input.GetKey(KeyCode.D))
         {
-            botaoD.transform.position = player.position + offsetBotaoD;
+            spriteD.sprite = spriteDPressed;
+        }
+        else
+        {
+            spriteD.sprite = spriteDIdle;
         }
 
-        // Fase 1: Fecha diálogo do rei
-        if (caixaTexto.activeSelf && Input.GetKeyDown(KeyCode.Return))
+        // Espaço tecla
+        if (Input.GetKey(KeyCode.Space))
         {
-            ShowElement(caixaTexto, false);
-            ShowElement(imagemRei, false);
-            ShowElement(botaoA, true);
-            ShowElement(botaoD, true);
+            spriteEspaco.sprite = spriteEspacoPressed;
+        }
+        else
+        {
+            spriteEspaco.sprite = spriteEspacoIdle;
         }
 
-        // Fase 2: Verifica movimento do jogador
-        if (!moveu && Vector3.Distance(player.position, pontoMovimento) > 1f)
+        // E tecla
+        if (Input.GetKey(KeyCode.E))
         {
-            moveu = true;
-            Invoke(nameof(EsconderBotoesMov), 2f);
+            spriteE.sprite = spriteEPressed;
+        }
+        else
+        {
+            spriteE.sprite = spriteEIdle;
+        }
+        
+        // Tutorial inicial: fecha caixa de texto ao pressionar Enter
+        if (!tutorialInicialConcluido && caixaTexto.activeSelf && Input.GetKeyDown(KeyCode.Return))
+        {
+            MostrarElemento(caixaTexto, false);
+            MostrarElemento(imagemRei, false);
+            tutorialInicialConcluido = true;
+
+            // Mostra as teclas de movimento (A e D)
+            MostrarMovimentoTeclas();
         }
 
-        // Fase 3: Lógica do botão espaço
-        GerenciarPopup(pontoEspaco, ref jaExibidoEspaco, fantasmaPopup, espaco, ref temporizadorEspacoAtivo, ref tempoAfastadoEspaco);
+        // Gerencia o tutorial do botão espaço
+        if (tutorialInicialConcluido)
+            GerenciarPopup(pontoEspaco, ref jaExibidoEspaco, fantasmaPopup, espaco);
 
-        // Fase 4: Lógica do botão E
-        GerenciarPopup(pontoE, ref jaExibidoE, possessaoPopup, botaoE, ref temporizadorEAtivo, ref tempoAfastadoE);
-
-        // Verifica retorno para posição inicial
-        if (moveu && Vector3.Distance(player.position, pontoMovimento) < 1f)
-        {
-            ShowElement(botaoA, true);
-            ShowElement(botaoD, true);
-            Invoke(nameof(EsconderBotoesMov), 2f);
-        }
+        // Gerencia o tutorial do botão E
+        if (jaExibidoEspaco)
+            GerenciarPopup(pontoE, ref jaExibidoE, possessaoPopup, botaoE);
     }
 
-    void GerenciarPopup(Vector3 ponto, ref bool jaExibido, GameObject popup, GameObject botao, ref bool temporizadorAtivo, ref float tempoAfastado)
+    void MostrarMovimentoTeclas()
     {
-        // Exibe pop-up
+        MostrarElemento(botaoA, true);
+        MostrarElemento(botaoD, true);
+
+        // Oculta as teclas após 5 segundos
+        Invoke(nameof(OcultarMovimentoTeclas), 5f);
+    }
+
+    void GerenciarPopup(Vector3 ponto, ref bool jaExibido, GameObject popup, GameObject tecla)
+    {
+        // Exibe o popup ao entrar na área
         if (!jaExibido && Vector3.Distance(player.position, ponto) < 1f)
         {
             jaExibido = true;
-            ShowElement(popup, true);
+            MostrarElemento(popup, true);
         }
 
-        // Fecha pop-up e mostra botão
+        // Fecha o popup e mostra a tecla associada ao pressionar Enter
         if (popup.activeSelf && Input.GetKeyDown(KeyCode.Return))
         {
-            ShowElement(popup, false);
-            ShowElement(botao, true);
-        }
+            MostrarElemento(popup, false);
+            MostrarElemento(tecla, true);
 
-        // Esconde botão se jogador se afastar
-        if (jaExibido && Vector3.Distance(player.position, ponto) > 1f)
-        {
-            if (!temporizadorAtivo)
-            {
-                temporizadorAtivo = true;
-                tempoAfastado = Time.time;
-            }
-            else if (Time.time - tempoAfastado >= 1.5f)
-            {
-                ShowElement(botao, false);
-            }
-        }
-
-        // Reaparece botão ao retornar
-        if (Vector3.Distance(player.position, ponto) < 1f && jaExibido)
-        {
-            ShowElement(botao, true);
-            temporizadorAtivo = false;
+            // Oculta a tecla após 5 segundos
+            Invoke(nameof(OcultarTeclas), 5f);
         }
     }
 
-    void ShowElement(GameObject element, bool show)
+    void MostrarElemento(GameObject elemento, bool estado)
     {
-        element.SetActive(show);
+        elemento.SetActive(estado);
     }
 
-    void EsconderBotoesMov()
+    void OcultarTodosOsElementos()
     {
-        ShowElement(botaoA, false);
-        ShowElement(botaoD, false);
+        MostrarElemento(botaoA, false);
+        MostrarElemento(botaoD, false);
+        MostrarElemento(fantasmaPopup, false);
+        MostrarElemento(possessaoPopup, false);
+        MostrarElemento(espaco, false);
+        MostrarElemento(botaoE, false);
+    }
+
+    void OcultarTeclas()
+    {
+        MostrarElemento(espaco, false);
+        MostrarElemento(botaoE, false);
+    }
+
+    void OcultarMovimentoTeclas()
+    {
+        MostrarElemento(botaoA, false);
+        MostrarElemento(botaoD, false);
     }
 }
