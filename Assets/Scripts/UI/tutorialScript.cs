@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DialogueEditor;
 
 public class TutorialScript : MonoBehaviour
 {
@@ -22,8 +23,7 @@ public class TutorialScript : MonoBehaviour
     public Sprite spriteEspacoPressed;
     
     [Header("Elementos")]
-    public GameObject caixaTexto;
-    public GameObject imagemRei;
+    public NPCConversation dialogo;
     public GameObject botaoA;
     public GameObject botaoD;
     public GameObject fantasmaPopup;
@@ -42,12 +42,15 @@ public class TutorialScript : MonoBehaviour
     private bool jaExibidoEspaco = false;
     private bool jaExibidoE = false;
     private bool tutorialInicialConcluido = false;
+    private bool dialogoFinalizado = false;
 
     void Start()
     {
+        // Inscreve-se no evento de término do diálogo
+        ConversationManager.OnConversationEnded += OnDialogoFinalizado;
+
         // Inicializa apenas a caixa de texto inicial
-        MostrarElemento(caixaTexto, true);
-        MostrarElemento(imagemRei, true);
+        MostrarDialogo();
 
         // Oculta todos os outros elementos
         OcultarTodosOsElementos();
@@ -93,15 +96,11 @@ public class TutorialScript : MonoBehaviour
         {
             spriteE.sprite = spriteEIdle;
         }
-        
-        // Tutorial inicial: fecha caixa de texto ao pressionar Enter
-        if (!tutorialInicialConcluido && caixaTexto.activeSelf && Input.GetKeyDown(KeyCode.Return))
-        {
-            MostrarElemento(caixaTexto, false);
-            MostrarElemento(imagemRei, false);
-            tutorialInicialConcluido = true;
 
-            // Mostra as teclas de movimento (A e D)
+        // Após o diálogo inicial, inicia o tutorial de movimento
+        if (!tutorialInicialConcluido && dialogoFinalizado) 
+        {
+            tutorialInicialConcluido = true;
             MostrarMovimentoTeclas();
         }
 
@@ -143,6 +142,20 @@ public class TutorialScript : MonoBehaviour
         }
     }
 
+    void MostrarDialogo()
+    {
+        ConversationManager.Instance.StartConversation(dialogo);
+    }
+
+    void OnDialogoFinalizado()
+    {
+        // Remove a inscrição do evento para evitar chamadas múltiplas
+        ConversationManager.OnConversationEnded -= OnDialogoFinalizado;
+
+        // Marca o diálogo como finalizado
+        dialogoFinalizado = true;
+    }
+
     void MostrarElemento(GameObject elemento, bool estado)
     {
         elemento.SetActive(estado);
@@ -170,3 +183,4 @@ public class TutorialScript : MonoBehaviour
         MostrarElemento(botaoD, false);
     }
 }
+

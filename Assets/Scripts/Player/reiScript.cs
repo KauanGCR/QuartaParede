@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DialogueEditor;
 
 public class reiScript : MonoBehaviour
 {
@@ -31,7 +32,6 @@ public class reiScript : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip somFantasma;
     public AudioClip somPossessao;
-
     void Start()
     {
         estaminaAtual = estaminaMax;

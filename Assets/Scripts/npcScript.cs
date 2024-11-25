@@ -26,26 +26,26 @@ public class npcScript : MonoBehaviour
     }
 
     void Update()
-{
-    animator.SetFloat("velX", Mathf.Abs(velX));
+    {
+        animator.SetFloat("velX", Mathf.Abs(velX));
 
-    if (isPossessed)
-    {
-        GerenciarMovimento();
-    }
-    else if (isPatrolling)
-    {
-        Patrulhar();
-    }
-    else
-    {
-        // Garante que a velocidade e animação sejam zeradas se o NPC não estiver patrulhando ou possuído
-        velX = 0;
-        animator.SetFloat("velX", 0);
-    }
+        if (isPossessed)
+        {
+            GerenciarMovimento();
+        }
+        else if (isPatrolling)
+        {
+            Patrulhar();
+        }
+        else
+        {
+            // Garante que a velocidade e animação sejam zeradas se o NPC não estiver patrulhando ou possuído
+            velX = 0;
+            animator.SetFloat("velX", 0);
+        }
 
-    animator.SetBool("isPossuido", isPossessed);
-}
+        animator.SetBool("isPossuido", isPossessed);
+    }
 
     void GerenciarMovimento()
     {
@@ -82,26 +82,26 @@ public class npcScript : MonoBehaviour
     }
 
     void Patrulhar()
-{
-    float step = velMax * Time.deltaTime; // Velocidade da patrulha
-    Vector2 target = movingToB ? patrolPointB : patrolPointA;
-
-    // Movimenta o NPC em direção ao ponto de patrulha
-    transform.position = Vector2.MoveTowards(transform.position, target, step);
-
-    // Verifica se chegou ao destino e alterna o ponto de patrulha
-    if (Vector2.Distance(transform.position, target) < 0.1f)
     {
-        movingToB = !movingToB;
+        float step = velMax * Time.deltaTime; // Velocidade da patrulha
+        Vector2 target = movingToB ? patrolPointB : patrolPointA;
+
+        // Movimenta o NPC em direção ao ponto de patrulha
+        transform.position = Vector2.MoveTowards(transform.position, target, step);
+
+        // Verifica se chegou ao destino e alterna o ponto de patrulha
+        if (Vector2.Distance(transform.position, target) < 0.1f)
+        {
+            movingToB = !movingToB;
+        }
+
+        // Define a direção do sprite com base no próximo ponto de patrulha
+        float direction = (target.x - transform.position.x);
+        transform.localScale = new Vector3(Mathf.Sign(direction), 1, 1);
+
+        // Ajusta o parâmetro da animação com a velocidade máxima
+        animator.SetFloat("velX", Mathf.Abs(velMax));
     }
-
-    // Define a direção do sprite com base no próximo ponto de patrulha
-    float direction = (target.x - transform.position.x);
-    transform.localScale = new Vector3(Mathf.Sign(direction), 1, 1);
-
-    // Ajusta o parâmetro da animação com a velocidade máxima
-    animator.SetFloat("velX", Mathf.Abs(velMax));
-}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

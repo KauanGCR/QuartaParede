@@ -37,7 +37,7 @@ public class chaveScript : MonoBehaviour
         // Checa se chegou no ponto de entrega e está na distância correta
         if (fechadura != null && Vector3.Distance(transform.position, fechadura.position) < distMin && isSeguindo)
         {
-            if (Input.GetKeyDown(KeyCode.Q)) // Interação ao pressionar 'E'
+            if (Input.GetKeyDown(KeyCode.Q)) // Interação ao pressionar 'Q'
             {
                 UseCollectible();
             }
