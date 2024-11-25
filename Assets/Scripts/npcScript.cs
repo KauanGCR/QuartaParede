@@ -129,4 +129,32 @@ public class npcScript : MonoBehaviour
     {
         isPossessed = false;
     }
+
+    public bool MoverParaPonto(Vector3 pontoFinal)
+{
+    if (isPossessed) return false; // Não mover se o NPC estiver possuído
+
+    float step = velMax * Time.deltaTime; // Velocidade do movimento
+
+    // Log para verificar os valores
+    Debug.Log($"Movendo NPC para {pontoFinal}. Posição atual: {transform.position}");
+
+    transform.position = Vector2.MoveTowards(transform.position, pontoFinal, step);
+
+    // Verifica se chegou ao destino
+    if (Vector2.Distance(transform.position, pontoFinal) < 0.1f)
+    {
+        velX = 0; // Para a animação
+        animator.SetFloat("velX", 0);
+        Debug.Log("NPC chegou ao destino.");
+        return true;
+    }
+
+    // Atualiza direção e animação
+    float direction = (pontoFinal.x - transform.position.x);
+    transform.localScale = new Vector3(Mathf.Sign(direction), 1, 1);
+    animator.SetFloat("velX", Mathf.Abs(velMax));
+
+    return false;
+}
 }

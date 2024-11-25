@@ -19,6 +19,7 @@ public class reiScript : MonoBehaviour
     public bool dentroParede = false;
     public bool modoFantasma = false;
     public bool possuindo = false;
+    public bool cenaOcorrendo = false;
     public npcScript npcAtual;
     public npcScript npcReferenciado;
     public float distMinPos = 15f;
@@ -41,7 +42,7 @@ public class reiScript : MonoBehaviour
     void Update()
     {
         GerenciarEstamina();
-        if(!possuindo)
+        if(!possuindo || !cenaOcorrendo)
         {
         GerenciarMovimento();
         }

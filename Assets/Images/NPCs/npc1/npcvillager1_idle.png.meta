@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: f8ad9b1371b39fe4bbce84baf786b349
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: npcvillager1_idle_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 22
+        width: 121
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b180179ba95d74194e3dc3ee69ff38
+      internalID: -1971416913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_1
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 22
+        width: 122
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19304b42be907a243812b82447eab217
+      internalID: -1352513299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_2
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 22
+        width: 124
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd8c5e254e1886409c64c80e38cb909
+      internalID: -364020194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_3
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 22
+        width: 125
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc8df16273d1f2478881a7dbf62495e
+      internalID: 531225267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 22
+        width: 127
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4281b09e3c4fc4e8769e3b92c3c855
+      internalID: 540593444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_5
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 22
+        width: 127
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002cfd4663cb19741a0ee5ad8d22e6b2
+      internalID: 1570160587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_6
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 22
+        width: 129
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7455cdf1cdd6548bc6f2829ad13b79
+      internalID: -1440684711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_7
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 22
+        width: 130
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fd2f05ba8f4e547bd2be472500ee6c
+      internalID: 1209405601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_8
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 22
+        width: 131
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4cd1639922007499b9a99da0de4e5d
+      internalID: -1981878674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_9
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 22
+        width: 132
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f486a9ea278ace48b1f09c51f81440c
+      internalID: -84202103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_10
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 22
+        width: 132
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654a0e7baac039e4eb025bdd0b2bc20b
+      internalID: -833195102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_11
+      rect:
+        serializedVersion: 2
+        x: 2767
+        y: 22
+        width: 132
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4071ea2c7fe16504a8eb39d426991f3b
+      internalID: 1515965419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_12
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 22
+        width: 131
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832b2e63d15bb654a9accdca67cd99ae
+      internalID: 734399913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_13
+      rect:
+        serializedVersion: 2
+        x: 3262
+        y: 22
+        width: 130
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74a3597744ad8c4caaeefd0f00007ea
+      internalID: -1780193278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_14
+      rect:
+        serializedVersion: 2
+        x: 3510
+        y: 22
+        width: 129
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfaa701c7b2bfec44847e7aabf99f585
+      internalID: -1519091055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_15
+      rect:
+        serializedVersion: 2
+        x: 3758
+        y: 22
+        width: 127
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecb383a34ed44843a93a3314d2f034a
+      internalID: -1553213909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_16
+      rect:
+        serializedVersion: 2
+        x: 4005
+        y: 22
+        width: 127
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c224ee89f5c50cd48b150e512eedd9de
+      internalID: -1096301231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_17
+      rect:
+        serializedVersion: 2
+        x: 4253
+        y: 22
+        width: 125
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d712db6f3cc4164cb9c6393135fe5e5
+      internalID: -1382249401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_18
+      rect:
+        serializedVersion: 2
+        x: 4501
+        y: 22
+        width: 124
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9246f053424e61e4ab040d798d843911
+      internalID: -1041504957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_19
+      rect:
+        serializedVersion: 2
+        x: 4749
+        y: 22
+        width: 122
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1d4ee0e9c8b454695994b9b25ee167
+      internalID: -1597862055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: npcvillager1_idle_20
+      rect:
+        serializedVersion: 2
+        x: 4997
+        y: 22
+        width: 121
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6b45f10d81e724eb3c59f8dd0c91fb
+      internalID: 1935147436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5c56aec1ccbe18c46b92db211efed1ac
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      npcvillager1_idle_0: -1971416913
+      npcvillager1_idle_1: -1352513299
+      npcvillager1_idle_10: -833195102
+      npcvillager1_idle_11: 1515965419
+      npcvillager1_idle_12: 734399913
+      npcvillager1_idle_13: -1780193278
+      npcvillager1_idle_14: -1519091055
+      npcvillager1_idle_15: -1553213909
+      npcvillager1_idle_16: -1096301231
+      npcvillager1_idle_17: -1382249401
+      npcvillager1_idle_18: -1041504957
+      npcvillager1_idle_19: -1597862055
+      npcvillager1_idle_2: -364020194
+      npcvillager1_idle_20: 1935147436
+      npcvillager1_idle_3: 531225267
+      npcvillager1_idle_4: 540593444
+      npcvillager1_idle_5: 1570160587
+      npcvillager1_idle_6: -1440684711
+      npcvillager1_idle_7: 1209405601
+      npcvillager1_idle_8: -1981878674
+      npcvillager1_idle_9: -84202103
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
