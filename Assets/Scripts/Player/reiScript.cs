@@ -32,24 +32,26 @@ public class reiScript : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip somFantasma;
     public AudioClip somPossessao;
-    private dialogueControllerScript dialogoFinalizado;
+    public bool freeze;
     void Start()
     {
         estaminaAtual = estaminaMax;
         jogadorSpriteRenderer = GetComponent<SpriteRenderer>();
-        dialogoFinalizado = GetComponent<dialogueControllerScript>();
     }
 
     void Update()
     {
         GerenciarEstamina();
-        if (!possuindo && (dialogoFinalizado == null || dialogoFinalizado.playerMovement.enabled))
+        if (!freeze)
         {
-            GerenciarMovimento();
+            if (!possuindo)
+            {
+                GerenciarMovimento();
+            }
+            GerenciarModoFantasma();
+            GerenciarPossessao();
+            animator.SetBool("modoFantasma", modoFantasma);
         }
-        GerenciarModoFantasma();
-        GerenciarPossessao();
-        animator.SetBool("modoFantasma", modoFantasma);
     }
 
     // Controle de movimentação horizontal e pulo
@@ -156,7 +158,7 @@ public class reiScript : MonoBehaviour
         }
 
         // Consumo de estamina no modo fantasma
-        if (modoFantasma)
+        if (modoFantasma && !freeze)
         {
             estaminaAtual -= drenoEstamina * Time.deltaTime;
 
@@ -175,10 +177,11 @@ public class reiScript : MonoBehaviour
         if (possuindo)
         {
             // Libera o NPC se a estamina acabar, a tecla 'E' for pressionada ou sair do modo fantasma
-            if (estaminaAtual <= 0 || Input.GetKeyDown(KeyCode.E) || !modoFantasma)
-            {
-                LiberarNPC();
-            }
+            if (!freeze)
+                if (estaminaAtual <= 0 || Input.GetKeyDown(KeyCode.E) || !modoFantasma)
+                {
+                    LiberarNPC();
+                }
         }
         else
         {
@@ -268,7 +271,7 @@ public class reiScript : MonoBehaviour
             possuindo = true;
             jogadorSpriteRenderer.enabled = false;
             transform.position = npcAtual.transform.position;
-
+            
             audioSource.clip = somPossessao;
             audioSource.loop = false; // Som de possessão não precisa repetir
             audioSource.Play();
@@ -282,8 +285,8 @@ public class reiScript : MonoBehaviour
             npcReferenciado.Liberar();
             possuindo = false;
             modoFantasma = false;
-
             transform.position = npcReferenciado.transform.position;
+
             //jogadorSpriteRenderer.sprite = jogadorSpriteAnterior; // Restaura o sprite original
             jogadorSpriteRenderer.enabled = true; // Reaparece o jogador
             npcReferenciado = null;

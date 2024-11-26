@@ -16,9 +16,9 @@ public class npcScript : MonoBehaviour
     public Vector2 patrolPointA; // Ponto de início da patrulha
     public Vector2 patrolPointB; // Ponto final da patrulha
     private bool movingToB = true; // Para alternar entre os pontos de patrulha
-
     private Collider2D npcCollider;
     public Animator animator;
+    public bool freeze;
 
     void Start()
     {
@@ -29,7 +29,7 @@ public class npcScript : MonoBehaviour
     {
         animator.SetFloat("velX", Mathf.Abs(velX));
 
-        if (isPossessed)
+        if (isPossessed && !freeze)
         {
             GerenciarMovimento();
         }

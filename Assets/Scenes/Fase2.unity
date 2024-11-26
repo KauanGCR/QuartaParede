@@ -1386,7 +1386,7 @@ Transform:
   m_GameObject: {fileID: 595516279}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.97, y: -0.24000001, z: -9.851301}
+  m_LocalPosition: {x: -38.58, y: -0.24000001, z: -9.851301}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1480,8 +1480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a208f1a19d2ad499d64b0442cf3876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1967023641}
-  playerMovement: {fileID: 0}
 --- !u!1 &791623086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,6 +1661,7 @@ MonoBehaviour:
   patrolPointA: {x: 0, y: 0}
   patrolPointB: {x: 0, y: 0}
   animator: {fileID: 791623093}
+  freeze: 0
 --- !u!95 &791623093
 Animator:
   serializedVersion: 5
@@ -2385,6 +2384,7 @@ MonoBehaviour:
   patrolPointA: {x: -8, y: -1.75}
   patrolPointB: {x: -16, y: -1.75}
   animator: {fileID: 1197488814}
+  freeze: 0
 --- !u!212 &1197488818
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2539,7 +2539,7 @@ Transform:
   m_GameObject: {fileID: 1295431064}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.97, y: -0.24000001, z: -9.851301}
+  m_LocalPosition: {x: -38.58, y: -0.24000001, z: -9.851301}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2761,6 +2761,7 @@ MonoBehaviour:
   patrolPointA: {x: 0, y: 0}
   patrolPointB: {x: 0, y: 0}
   animator: {fileID: 1323905134}
+  freeze: 0
 --- !u!95 &1323905134
 Animator:
   serializedVersion: 5
@@ -3466,6 +3467,7 @@ MonoBehaviour:
   patrolPointA: {x: 0, y: 0}
   patrolPointB: {x: 0, y: 0}
   animator: {fileID: 1915825117}
+  freeze: 0
 --- !u!95 &1915825117
 Animator:
   serializedVersion: 5
@@ -3923,6 +3925,7 @@ MonoBehaviour:
   audioSource: {fileID: 1967023642}
   somFantasma: {fileID: 8300000, guid: 6c0836633b54c3849a97a9169923092e, type: 3}
   somPossessao: {fileID: 8300000, guid: 89f49c8fd6fd15f448d931e7d156995c, type: 3}
+  freeze: 0
 --- !u!212 &1967023648
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3984,7 +3987,7 @@ Transform:
   m_GameObject: {fileID: 1967023641}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.97, y: -1.74, z: 0}
+  m_LocalPosition: {x: -38.58, y: -1.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4210,6 +4213,7 @@ MonoBehaviour:
   patrolPointA: {x: -8, y: -1.75}
   patrolPointB: {x: -16, y: -1.75}
   animator: {fileID: 2029951954}
+  freeze: 0
 --- !u!212 &2029951958
 SpriteRenderer:
   m_ObjectHideFlags: 0
