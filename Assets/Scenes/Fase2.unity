@@ -675,9 +675,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 2
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":88.5,\"yPos\":98},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Obrigado
-    por comprar minhas ma\xE7\xE3s! Estou gr\xE1vida e preciso de dinheiro...\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Maria\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":2.5,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":91,\"yPos\":279},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
-    quem agrade\xE7o.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Guarda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":367.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Obrigado
+    por comprar minhas ma\xE7\xE3s! Estou gr\xE1vida e preciso de dinheiro...\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Maria\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":2.5,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":370,\"yPos\":203},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Eu
+    quem agrade\xE7o. Espero que d\xEA tudo certo...\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Guarda\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}
@@ -878,16 +878,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 8
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":95.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Voc\xEA
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":367.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Voc\xEA
     recebeu aquela carta do Conselheiro? Ele disse que quer tomar o trono.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alde\xE3o
-    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":100,\"yPos\":176},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"N\xE3o
+    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":372,\"yPos\":176},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"N\xE3o
     tenho certeza, e quanto ao Irm\xE3o do Rei? O que faremos com ele?\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alde\xE3o
-    2\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":107,\"yPos\":344},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Falem
+    2\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":379,\"yPos\":344},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Falem
     mais baixo... Quanto ao Irm\xE3o do Rei, imagino que o Conselheiro pretenda se
     livrar dele.\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Alde\xE3o
-    3\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":107,\"yPos\":549},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O
+    3\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":379,\"yPos\":549},\"ID\":4,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O
     que est\xE1 acontecendo? Essas pessoas t\xEAm contato com o Conselheiro? Por
-    que ele quer tomar o trono?\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Rei\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":112,\"yPos\":710},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tenho
+    que ele quer tomar o trono?\",\"parentUIDs\":[3],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Rei\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":384,\"yPos\":710},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tenho
     que investigar melhor...\",\"parentUIDs\":[4],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Rei\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
@@ -1386,7 +1386,7 @@ Transform:
   m_GameObject: {fileID: 595516279}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.9, y: -0.24000001, z: -9.851301}
+  m_LocalPosition: {x: 11.97, y: -0.24000001, z: -9.851301}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1420,6 +1420,7 @@ GameObject:
   - component: {fileID: 686265681}
   - component: {fileID: 686265683}
   - component: {fileID: 686265684}
+  - component: {fileID: 686265685}
   m_Layer: 0
   m_Name: Gerenciador
   m_TagString: Untagged
@@ -1467,6 +1468,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogo: {fileID: 2072882946}
+--- !u!114 &686265685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686265680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a208f1a19d2ad499d64b0442cf3876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1967023641}
+  playerMovement: {fileID: 0}
 --- !u!1 &791623086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1498,7 @@ GameObject:
   - component: {fileID: 791623093}
   m_Layer: 0
   m_Name: Badguy 1
-  m_TagString: NPC
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1956,7 +1971,7 @@ Transform:
   m_GameObject: {fileID: 886862844}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.24, y: -1.12, z: 0}
+  m_LocalPosition: {x: -49.29, y: -1.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2477,7 +2492,7 @@ Transform:
   m_GameObject: {fileID: 1295431064}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.9, y: -0.24000001, z: -9.851301}
+  m_LocalPosition: {x: 11.97, y: -0.24000001, z: -9.851301}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3751,7 +3766,6 @@ MonoBehaviour:
   dentroParede: 0
   modoFantasma: 0
   possuindo: 0
-  cenaOcorrendo: 0
   npcAtual: {fileID: 0}
   npcReferenciado: {fileID: 0}
   distMinPos: 8
@@ -3821,7 +3835,7 @@ Transform:
   m_GameObject: {fileID: 1967023641}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.9, y: -1.74, z: 0}
+  m_LocalPosition: {x: 11.97, y: -1.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3906,7 +3920,7 @@ Transform:
   m_GameObject: {fileID: 2013163059}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.25, y: -1.11, z: 0}
+  m_LocalPosition: {x: -49.26, y: -1.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4108,7 +4122,7 @@ Transform:
   m_GameObject: {fileID: 2029951953}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.93, y: -1.75, z: 0}
+  m_LocalPosition: {x: -43.82, y: -1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

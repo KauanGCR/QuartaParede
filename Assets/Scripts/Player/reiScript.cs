@@ -19,7 +19,6 @@ public class reiScript : MonoBehaviour
     public bool dentroParede = false;
     public bool modoFantasma = false;
     public bool possuindo = false;
-    public bool cenaOcorrendo = false;
     public npcScript npcAtual;
     public npcScript npcReferenciado;
     public float distMinPos = 15f;
@@ -33,18 +32,20 @@ public class reiScript : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip somFantasma;
     public AudioClip somPossessao;
+    private dialogueControllerScript dialogoFinalizado;
     void Start()
     {
         estaminaAtual = estaminaMax;
         jogadorSpriteRenderer = GetComponent<SpriteRenderer>();
+        dialogoFinalizado = GetComponent<dialogueControllerScript>();
     }
 
     void Update()
     {
         GerenciarEstamina();
-        if(!possuindo || !cenaOcorrendo)
+        if (!possuindo && (dialogoFinalizado == null || dialogoFinalizado.playerMovement.enabled))
         {
-        GerenciarMovimento();
+            GerenciarMovimento();
         }
         GerenciarModoFantasma();
         GerenciarPossessao();
@@ -55,36 +56,36 @@ public class reiScript : MonoBehaviour
     void GerenciarMovimento()
     {
         // Verifica se a tecla A ou D está pressionada
-    if (Input.GetKey(KeyCode.A))
-    {
-        // Se o personagem estava se movendo para a direita, redefinimos a velocidade
-        if (velX > 0)
-            velX = 0;
-        
-        velX -= acel * Time.deltaTime; // Move para a esquerda
-        transform.localScale = new Vector3(-1, 1, 1); // Vira para a esquerda
-    }
-    else if (Input.GetKey(KeyCode.D))
-    {
-        // Se o personagem estava se movendo para a esquerda, redefinimos a velocidade
-        if (velX < 0)
-            velX = 0;
+        if (Input.GetKey(KeyCode.A))
+        {
+            // Se o personagem estava se movendo para a direita, redefinimos a velocidade
+            if (velX > 0)
+                velX = 0;
 
-        velX += acel * Time.deltaTime; // Move para a direita
-        transform.localScale = new Vector3(1, 1, 1); // Vira para a direita
-    }
-    else
-    {
-        // Aplica uma desaceleração rápida para parar o personagem
-        float desaceleracao = 15f;
-        velX = Mathf.MoveTowards(velX, 0, desaceleracao * Time.deltaTime);
-    }
-    
+            velX -= acel * Time.deltaTime; // Move para a esquerda
+            transform.localScale = new Vector3(-1, 1, 1); // Vira para a esquerda
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            // Se o personagem estava se movendo para a esquerda, redefinimos a velocidade
+            if (velX < 0)
+                velX = 0;
 
-        float velocidadeAtual = (dentroParede && modoFantasma) ? velMax * 0.5f : velMax; 
+            velX += acel * Time.deltaTime; // Move para a direita
+            transform.localScale = new Vector3(1, 1, 1); // Vira para a direita
+        }
+        else
+        {
+            // Aplica uma desaceleração rápida para parar o personagem
+            float desaceleracao = 15f;
+            velX = Mathf.MoveTowards(velX, 0, desaceleracao * Time.deltaTime);
+        }
+
+
+        float velocidadeAtual = (dentroParede && modoFantasma) ? velMax * 0.5f : velMax;
         velX = Mathf.Clamp(velX, -velocidadeAtual, velocidadeAtual);
 
-    // Atualiza a direção da sprite
+        // Atualiza a direção da sprite
         if (velX > 0)
         {
             transform.localScale = new Vector3(-1, 1, 1); // Virado para a direita
@@ -119,7 +120,7 @@ public class reiScript : MonoBehaviour
         if (!modoFantasma && !possuindo)
         {
             estaminaAtual = Mathf.Min(estaminaAtual + drenoEstamina * Time.deltaTime, estaminaMax);
-            if(estaminaAtual >= 100)
+            if (estaminaAtual >= 100)
             {
                 estaminaZerada = false;
             }
@@ -170,48 +171,48 @@ public class reiScript : MonoBehaviour
 
     // Controle de possessão de NPCs
     void GerenciarPossessao()
-{
-    if (possuindo)
     {
-        // Libera o NPC se a estamina acabar, a tecla 'E' for pressionada ou sair do modo fantasma
-        if (estaminaAtual <= 0 || Input.GetKeyDown(KeyCode.E) || !modoFantasma)
+        if (possuindo)
         {
-            LiberarNPC();
+            // Libera o NPC se a estamina acabar, a tecla 'E' for pressionada ou sair do modo fantasma
+            if (estaminaAtual <= 0 || Input.GetKeyDown(KeyCode.E) || !modoFantasma)
+            {
+                LiberarNPC();
+            }
+        }
+        else
+        {
+            // Atualiza o NPC mais próximo
+            AtualizarNPCProximo();
+
+            // Possui o NPC se estiver no modo fantasma e próximo de um NPC
+            if (modoFantasma && Input.GetKeyDown(KeyCode.E) && npcAtual != null)
+            {
+                PossuirNPC();
+            }
         }
     }
-    else
-    {
-        // Atualiza o NPC mais próximo
-        AtualizarNPCProximo();
 
-        // Possui o NPC se estiver no modo fantasma e próximo de um NPC
-        if (modoFantasma && Input.GetKeyDown(KeyCode.E) && npcAtual != null)
+    void AtualizarNPCProximo()
+    {
+        npcAtual = null; // Reseta o NPC atual
+        float menorDistancia = distMinPos; // Define a distância mínima como o limite
+
+        // Busca todos os NPCs na cena
+        npcScript[] npcs = FindObjectsOfType<npcScript>();
+
+        foreach (npcScript npc in npcs)
         {
-            PossuirNPC();
+            float distancia = Vector2.Distance(transform.position, npc.transform.position);
+
+            // Atualiza o NPC mais próximo dentro da distância mínima
+            if (distancia <= menorDistancia)
+            {
+                menorDistancia = distancia;
+                npcAtual = npc;
+            }
         }
     }
-}
-
-void AtualizarNPCProximo()
-{
-    npcAtual = null; // Reseta o NPC atual
-    float menorDistancia = distMinPos; // Define a distância mínima como o limite
-
-    // Busca todos os NPCs na cena
-    npcScript[] npcs = FindObjectsOfType<npcScript>();
-
-    foreach (npcScript npc in npcs)
-    {
-        float distancia = Vector2.Distance(transform.position, npc.transform.position);
-
-        // Atualiza o NPC mais próximo dentro da distância mínima
-        if (distancia <= menorDistancia)
-        {
-            menorDistancia = distancia;
-            npcAtual = npc;
-        }
-    }
-}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -281,6 +282,8 @@ void AtualizarNPCProximo()
             npcReferenciado.Liberar();
             possuindo = false;
             modoFantasma = false;
+
+            transform.position = npcReferenciado.transform.position;
             //jogadorSpriteRenderer.sprite = jogadorSpriteAnterior; // Restaura o sprite original
             jogadorSpriteRenderer.enabled = true; // Reaparece o jogador
             npcReferenciado = null;
@@ -301,6 +304,6 @@ void AtualizarNPCProximo()
         }
         dentroParede = false;
     }
-    
+
 }
 

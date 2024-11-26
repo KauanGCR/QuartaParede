@@ -21,6 +21,9 @@ public class CenaScriptada : MonoBehaviour
     private npcScript scriptNpc1; // Script do NPC 1
     private npcScript scriptNpc2; // Script do NPC 2
 
+    // Variáveis para salvar o estado original da câmera
+    private Transform cameraFollowOriginal;
+    private Transform cameraLookAtOriginal;
     private void Start()
     {
         // Obtém os scripts dos NPCs
@@ -39,36 +42,43 @@ public class CenaScriptada : MonoBehaviour
     }
 
     private void Update()
-{
-    if (!cenaIniciada && Vector3.Distance(rei.position, pontoAtivacao) < 1f)
     {
-        IniciarCenaScriptada();
-    }
-
-    if (dialogoTerminado)
-    {
-        // Chamando o método de movimento
-        bool npc1Movido = scriptNpc1 != null && scriptNpc1.MoverParaPonto(pontoFinalNpc1);
-        bool npc2Movido = scriptNpc2 != null && scriptNpc2.MoverParaPonto(pontoFinalNpc2);
-
-        if (npc1Movido)
+        if (!cenaIniciada && Vector3.Distance(rei.position, pontoAtivacao) < 1f)
         {
-            npc1.gameObject.SetActive(false); // Esconde o NPC 1
+            IniciarCenaScriptada();
         }
 
-        if (npc2Movido)
+        if (dialogoTerminado)
         {
-            npc2.gameObject.SetActive(false); // Esconde o NPC 2
-            EncerrarCenaScriptada();
+            // Chamando o método de movimento
+            bool npc1Movido = scriptNpc1 != null && scriptNpc1.MoverParaPonto(pontoFinalNpc1);
+            bool npc2Movido = scriptNpc2 != null && scriptNpc2.MoverParaPonto(pontoFinalNpc2);
+
+            if (npc1Movido)
+            {
+                npc1.gameObject.SetActive(false); // Esconde o NPC 1
+            }
+
+            if (npc2Movido)
+            {
+                npc2.gameObject.SetActive(false); // Esconde o NPC 2
+                EncerrarCenaScriptada();
+            }
         }
     }
-}
 
     private void IniciarCenaScriptada()
     {
         cenaIniciada = true;
 
-        // Fazer a câmera do Cinemachine seguir o NPC 1
+        // Salva o estado original da câmera
+        if (cinemachineCamera != null)
+        {
+            cameraFollowOriginal = cinemachineCamera.Follow;
+            cameraLookAtOriginal = cinemachineCamera.LookAt;
+        }
+
+        // Fazer a câmera do Cinemachine seguir o NPC 2
         AlterarAlvoCamera(npc2);
 
         // Iniciar o diálogo
@@ -87,14 +97,18 @@ public class CenaScriptada : MonoBehaviour
         // Chamado pelo Dialogue Editor quando o diálogo terminar
         dialogoTerminado = true;
 
-        // Alterar a câmera para seguir o NPC 1 enquanto ele se move
+        // Alterar a câmera para seguir o NPC 2 enquanto ele se move
         AlterarAlvoCamera(npc2);
     }
 
     private void EncerrarCenaScriptada()
     {
-        // Fazer a câmera voltar para o rei
-        AlterarAlvoCamera(rei);
+        // Fazer a câmera voltar para o estado original
+        if (cinemachineCamera != null)
+        {
+            cinemachineCamera.Follow = cameraFollowOriginal;
+            cinemachineCamera.LookAt = cameraLookAtOriginal;
+        }
 
         // Desativar este script para evitar loops
         this.enabled = false;
