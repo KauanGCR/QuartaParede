@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: 0f22454021c88ec4aa7fac351fb2eacd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: camareiraidlepossess_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 127
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cefb00b5a3d4ef45af5f00305efdbdf
+      internalID: 457469293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_1
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 0
+        width: 129
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42938a28ebe654a4b82815835062345a
+      internalID: -1025588400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_2
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 0
+        width: 131
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3a6f8a90f9dc0e4d8212b1fe67709db
+      internalID: 1685758988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_3
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 0
+        width: 133
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76614f048cb906f44a0d663fd283dafb
+      internalID: -203484934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_4
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 0
+        width: 136
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6c4f1668bec774ea5e1ba050397155
+      internalID: -347353200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_5
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 0
+        width: 139
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9b52299ee72584dbcedc3c2ae4aedd
+      internalID: -1518374403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_6
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 0
+        width: 141
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7598213d9da453d4b8a5b018c3236972
+      internalID: -65576015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_7
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 0
+        width: 143
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95ee2cf688b16c42b251cf8c3568cbd
+      internalID: 1347148145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_8
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 0
+        width: 145
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5324aec6ff1740643b877b788fa5ad95
+      internalID: -845026439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_9
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 0
+        width: 146
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e643966c715c3f4a9b5164c49ea22f0
+      internalID: 2135636018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_10
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 0
+        width: 146
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4181dddf4ac130e469b923016e1c2b97
+      internalID: 158369752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_11
+      rect:
+        serializedVersion: 2
+        x: 2765
+        y: 0
+        width: 146
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71b5eaa96150854cb0b61065b0be59e
+      internalID: -1248024820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_12
+      rect:
+        serializedVersion: 2
+        x: 3013
+        y: 0
+        width: 145
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84bfba438fd82345a79906bc795ecc4
+      internalID: -1661874083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_13
+      rect:
+        serializedVersion: 2
+        x: 3261
+        y: 0
+        width: 143
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ace3a1cdc222c46b29cddef5d74199
+      internalID: -1884576688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_14
+      rect:
+        serializedVersion: 2
+        x: 3509
+        y: 0
+        width: 141
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90999d3f6afb6174796c35f45342bbed
+      internalID: -1609101163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_15
+      rect:
+        serializedVersion: 2
+        x: 3757
+        y: 0
+        width: 139
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf37c44cd5cf334e8ea436efc0f55fb
+      internalID: -880782803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_16
+      rect:
+        serializedVersion: 2
+        x: 4006
+        y: 0
+        width: 136
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e69122f4b83e9b4387b44afa806573b
+      internalID: 1546668177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_17
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 0
+        width: 133
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b463f8e7ab8d7a04d85f73dff1ed732a
+      internalID: 130258515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_18
+      rect:
+        serializedVersion: 2
+        x: 4503
+        y: 0
+        width: 131
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3321c7b9feed4341b7b10abe6794497
+      internalID: 1223796637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_19
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 0
+        width: 129
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8632e85b543714fbd3dd6a8c0ff609
+      internalID: -1768376075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camareiraidlepossess_20
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 127
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874da5e758d145b45bf63cf57eb61340
+      internalID: -451500357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 58c6456cd8b094446a8090ed82fd8c70
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      camareiraidlepossess_0: 457469293
+      camareiraidlepossess_1: -1025588400
+      camareiraidlepossess_10: 158369752
+      camareiraidlepossess_11: -1248024820
+      camareiraidlepossess_12: -1661874083
+      camareiraidlepossess_13: -1884576688
+      camareiraidlepossess_14: -1609101163
+      camareiraidlepossess_15: -880782803
+      camareiraidlepossess_16: 1546668177
+      camareiraidlepossess_17: 130258515
+      camareiraidlepossess_18: 1223796637
+      camareiraidlepossess_19: -1768376075
+      camareiraidlepossess_2: 1685758988
+      camareiraidlepossess_20: -451500357
+      camareiraidlepossess_3: -203484934
+      camareiraidlepossess_4: -347353200
+      camareiraidlepossess_5: -1518374403
+      camareiraidlepossess_6: -65576015
+      camareiraidlepossess_7: 1347148145
+      camareiraidlepossess_8: -845026439
+      camareiraidlepossess_9: 2135636018
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
