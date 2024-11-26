@@ -12,7 +12,14 @@ public class dialogueControllerScript : MonoBehaviour
     void Start()
     {
         // Obtém o script de movimento do jogador
-        playerMovement = player.GetComponent<reiScript>();
+        if (player == null)
+        {
+            player = GameObject.FindWithTag("Player"); // Localiza o jogador pela tag
+            if (player != null)
+            {
+                playerMovement = player.GetComponent<reiScript>();
+            }
+        }
 
         // Inscreve-se nos eventos do Dialogue Editor
         ConversationManager.OnConversationStarted += OnDialogoIniciado;
