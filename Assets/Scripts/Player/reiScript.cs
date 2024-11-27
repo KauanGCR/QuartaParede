@@ -107,12 +107,6 @@ public class reiScript : MonoBehaviour
         {
             transform.localScale = new Vector3(1, 1, 1); // Virado para a esquerda
         }
-        // Pulo
-        if (Input.GetKeyDown(KeyCode.W) && aterrado)
-        {
-            velY = pulo;
-            aterrado = false;
-        }
 
         // Aplicação da gravidade
         if (!aterrado)
