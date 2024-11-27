@@ -936,7 +936,6 @@ MonoBehaviour:
   textBoxBackground: {fileID: 1413917723}
   arrowIndicator: {fileID: 1097297564}
   images:
-  - {fileID: 21300000, guid: 7bb3e50a9c61f4d4ab7585cb6ea4da6e, type: 3}
   - {fileID: 21300000, guid: f80b13962a13af841895c2227faa3ea8, type: 3}
   - {fileID: 21300000, guid: 9ab44ad4b7727a249bb8f6bbaab74b34, type: 3}
   - {fileID: 21300000, guid: 4fca256b224c58341b26d09c0eb8c0de, type: 3}
@@ -945,9 +944,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4eda284ff17d0514a8e807be8a2af36c, type: 3}
   - {fileID: 21300000, guid: 640e6e391dd6fc448879b8231d741f6e, type: 3}
   texts:
-  - "Ap\xF3s salvar seu Irm\xE3o, o Rei teve seu encontro definitivo com a Morte,
-    mas ao inv\xE9s de descansar pediu por outra chance. Seu pedido foi aceito, permitindo
-    que o Rei reiniciasse o ciclo da vida."
   - "Acorde meu lindo, est\xE1 na hora..."
   - "N\xE3o chore, voc\xEA \xE9 t\xE3o lindo, t\xE3o perfeito..."
   - "Obrigada por estar aqui, sempre sonhamos em ter voc\xEA..."
