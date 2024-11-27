@@ -8,7 +8,7 @@ public class transicaoFasesScripts : MonoBehaviour
     public Image fadeImage; // Imagem usada para o fade
     public float fadeDuration = 1.0f; // Duração do fade
     public string proximaCena; // Nome da próxima cena
-
+    public float delayAntesDeFade = 2.0f; // Tempo de delay antes de começar o fade
     private bool transitioning = false; // Evita múltiplas transições
 
     private void Start()
@@ -57,6 +57,10 @@ public class transicaoFasesScripts : MonoBehaviour
     private IEnumerator TransitionToNextScene()
     {
         transitioning = true; // Evita múltiplas transições
+
+        // Aguarda o tempo de delay antes de iniciar o fade
+        yield return new WaitForSeconds(delayAntesDeFade);
+
         yield return FadeOut(); // Faz o fade para preto
 
         // Carrega a próxima cena

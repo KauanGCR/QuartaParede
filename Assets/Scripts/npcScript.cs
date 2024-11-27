@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DialogueEditor;
 
 public class npcScript : MonoBehaviour
 {
@@ -11,25 +12,34 @@ public class npcScript : MonoBehaviour
     private float velX = 0f;
     private float velY = 0f;
     private bool aterrado = false;
-    public bool isPossessed = false; // Para verificar se o NPC está possuído
-    public bool isPatrolling = false; // Para verificar se o NPC deve patrulhar
-    public Vector2 patrolPointA; // Ponto de início da patrulha
-    public Vector2 patrolPointB; // Ponto final da patrulha
-    private bool movingToB = true; // Para alternar entre os pontos de patrulha
+    public bool isPossessed = false;
+    public bool isPatrolling = false;
+    public Vector2 patrolPointA;
+    public Vector2 patrolPointB;
+    private bool movingToB = true;
     private Collider2D npcCollider;
     public Animator animator;
+    public bool isScriptedNPC = false;
+    public NPCConversation dialogo;
+    private bool dialogueStarted = false; // Flag para garantir que o diálogo só inicie uma vez
     public bool freeze;
 
     void Start()
     {
-        npcCollider = GetComponent<Collider2D>(); // Acessa o Collider do NPC
+        npcCollider = GetComponent<Collider2D>();
     }
 
     void Update()
     {
+        if (isPossessed && isScriptedNPC && !dialogueStarted)
+        {
+            IniciarCenaScriptada();
+            return; // Evita que o NPC tente se mover enquanto o diálogo ocorre
+        }
+
         animator.SetFloat("velX", Mathf.Abs(velX));
 
-        if (isPossessed && !freeze)
+        if (isPossessed && !isScriptedNPC && !freeze)
         {
             GerenciarMovimento();
         }
@@ -39,7 +49,6 @@ public class npcScript : MonoBehaviour
         }
         else
         {
-            // Garante que a velocidade e animação sejam zeradas se o NPC não estiver patrulhando ou possuído
             velX = 0;
             animator.SetFloat("velX", 0);
         }
@@ -52,14 +61,14 @@ public class npcScript : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             if (velX > 0) velX = 0;
-            velX -= acel * Time.deltaTime; // Move para a esquerda
-            transform.localScale = new Vector3(-1, 1, 1); // Vira para a esquerda
+            velX -= acel * Time.deltaTime;
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             if (velX < 0) velX = 0;
-            velX += acel * Time.deltaTime; // Move para a direita
-            transform.localScale = new Vector3(1, 1, 1); // Vira para a direita
+            velX += acel * Time.deltaTime;
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else
         {
@@ -83,23 +92,19 @@ public class npcScript : MonoBehaviour
 
     void Patrulhar()
     {
-        float step = velMax * Time.deltaTime; // Velocidade da patrulha
+        float step = velMax * Time.deltaTime;
         Vector2 target = movingToB ? patrolPointB : patrolPointA;
 
-        // Movimenta o NPC em direção ao ponto de patrulha
         transform.position = Vector2.MoveTowards(transform.position, target, step);
 
-        // Verifica se chegou ao destino e alterna o ponto de patrulha
         if (Vector2.Distance(transform.position, target) < 0.1f)
         {
             movingToB = !movingToB;
         }
 
-        // Define a direção do sprite com base no próximo ponto de patrulha
         float direction = (target.x - transform.position.x);
         transform.localScale = new Vector3(Mathf.Sign(direction), 1, 1);
 
-        // Ajusta o parâmetro da animação com a velocidade máxima
         animator.SetFloat("velX", Mathf.Abs(velMax));
     }
 
@@ -131,30 +136,39 @@ public class npcScript : MonoBehaviour
     }
 
     public bool MoverParaPonto(Vector3 pontoFinal)
-{
-    if (isPossessed) return false; // Não mover se o NPC estiver possuído
-
-    float step = velMax * Time.deltaTime; // Velocidade do movimento
-
-    // Log para verificar os valores
-    Debug.Log($"Movendo NPC para {pontoFinal}. Posição atual: {transform.position}");
-
-    transform.position = Vector2.MoveTowards(transform.position, pontoFinal, step);
-
-    // Verifica se chegou ao destino
-    if (Vector2.Distance(transform.position, pontoFinal) < 0.1f)
     {
-        velX = 0; // Para a animação
-        animator.SetFloat("velX", 0);
-        Debug.Log("NPC chegou ao destino.");
-        return true;
+        if (isPossessed) return false; // Não mover se o NPC estiver possuído
+
+        float step = velMax * Time.deltaTime; // Velocidade do movimento
+
+        // Log para verificar os valores
+        Debug.Log($"Movendo NPC para {pontoFinal}. Posição atual: {transform.position}");
+
+        transform.position = Vector2.MoveTowards(transform.position, pontoFinal, step);
+
+        // Verifica se chegou ao destino
+        if (Vector2.Distance(transform.position, pontoFinal) < 0.1f)
+        {
+            velX = 0; // Para a animação
+            animator.SetFloat("velX", 0);
+            Debug.Log("NPC chegou ao destino.");
+            return true;
+        }
+
+        // Atualiza direção e animação
+        float direction = (pontoFinal.x - transform.position.x);
+        transform.localScale = new Vector3(Mathf.Sign(direction), 1, 1);
+        animator.SetFloat("velX", Mathf.Abs(velMax));
+
+        return false;
     }
 
-    // Atualiza direção e animação
-    float direction = (pontoFinal.x - transform.position.x);
-    transform.localScale = new Vector3(Mathf.Sign(direction), 1, 1);
-    animator.SetFloat("velX", Mathf.Abs(velMax));
-
-    return false;
-}
+    void IniciarCenaScriptada()
+    {
+        dialogueStarted = true;
+        velX = 0;
+        animator.SetFloat("velX", 0);
+        Debug.Log("Iniciou conversa");
+        ConversationManager.Instance.StartConversation(dialogo);
+    }
 }
