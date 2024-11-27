@@ -141,6 +141,6 @@ public class cutsceneFinalScript : MonoBehaviour
     private void EndCutscene()
     {
         Debug.Log("Cutscene finalizada!");
-        SceneManager.LoadScene("Creditos");
+        SceneManager.LoadScene("Menu");
     }
 }
