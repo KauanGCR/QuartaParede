@@ -800,6 +800,7 @@ MonoBehaviour:
   audioSource: {fileID: 478570060}
   somFantasma: {fileID: 8300000, guid: 6c0836633b54c3849a97a9169923092e, type: 3}
   somPossessao: {fileID: 8300000, guid: 89f49c8fd6fd15f448d931e7d156995c, type: 3}
+  freeze: 0
 --- !u!212 &478570058
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1773,7 +1774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 3
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":95.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":367.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"O
     que aconteceu comigo? Eu virei um fantasma? N\xE3o sei por que continuo aqui,
     mas sinto que isso n\xE3o est\xE1 certo. J\xE1 que estou preso aqui, acho que
     n\xE3o faz mal dar uma olhada por a\xED enquanto tento descobrir como resolver
@@ -3291,6 +3292,9 @@ MonoBehaviour:
   patrolPointA: {x: -59.67, y: -1.75}
   patrolPointB: {x: -54.1, y: -1.75}
   animator: {fileID: 1815009725}
+  isScriptedNPC: 0
+  dialogo: {fileID: 0}
+  freeze: 0
 --- !u!212 &1815009721
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3657,8 +3661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a208f1a19d2ad499d64b0442cf3876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 478570052}
-  playerMovement: {fileID: 0}
 --- !u!1 &2055505875
 GameObject:
   m_ObjectHideFlags: 0

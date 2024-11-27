@@ -51,6 +51,17 @@ public class reiScript : MonoBehaviour
             GerenciarModoFantasma();
             GerenciarPossessao();
             animator.SetBool("modoFantasma", modoFantasma);
+            if (npcAtual != null)
+            {
+                npcAtual.freeze = false;
+            }
+        }
+        else
+        {
+            if (npcAtual != null)
+            {
+                npcAtual.freeze = true;
+            }
         }
     }
 
@@ -271,7 +282,7 @@ public class reiScript : MonoBehaviour
             possuindo = true;
             jogadorSpriteRenderer.enabled = false;
             transform.position = npcAtual.transform.position;
-            
+
             audioSource.clip = somPossessao;
             audioSource.loop = false; // Som de possessão não precisa repetir
             audioSource.Play();
